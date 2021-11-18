@@ -1,0 +1,20 @@
+<mat-card class="pokemon-card">
+    <mat-card-header>
+        <img mat-card-avatar class="header-sprite" src={{this.pokemon.sprites.front_default}}>
+        <mat-card-title class="capitalized">{{ this.pokemon.name }}</mat-card-title>
+        <mat-card-subtitle>
+            <span class="capitalized" *ngFor="let type of this.pokemon.types">
+                {{type.type.name}}
+            </span>
+        
+        </mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{this.pokemon.sprites.front_default}}" alt="Photo of a Pokemon">
+    <mat-card-content>
+
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-button>Collected</button>
+        <button mat-button>Released</button>
+    </mat-card-actions>
+</mat-card>
