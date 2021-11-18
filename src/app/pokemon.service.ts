@@ -18,15 +18,7 @@ export class PokemonService {
     return this.http.get<Pokemon>(this.api + '/pokemon/' + name).pipe(shareReplay(1));
   }
 
-  public getGen1Pokemon(): Observable<any[]> {
-    return this.http.get<Pokemon[]>(this.api + '/pokemon?limit=165').pipe(shareReplay(1));
-  }
-
-  public getGen2and3Pokemon(): Observable<any[]> {
-    return this.http.get<Pokemon[]>(this.api + '/pokemon?limit=164&offset=165').pipe(shareReplay(1));
-  }
-
-  public getGen4Pokemon(): Observable<any[]> {
-    return this.http.get<Pokemon[]>(this.api + '/pokemon?limit=164&offset=329').pipe(shareReplay(1));
+  public getAllPokemon(): Observable<any[]> {
+    return this.http.get<Pokemon[]>(this.api + '/pokemon?limit=493').pipe(shareReplay(1));
   }
 }

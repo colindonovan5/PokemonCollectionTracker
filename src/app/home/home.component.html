@@ -1,13 +1,5 @@
 <div class="container" fxLayout="row wrap" fxLayoutGap="20px" fxLayoutAlign="center">
-    <div  *ngFor="let pokemon of pokemonList1">
-        <app-pokemon-card [pokemonName]=pokemon.name></app-pokemon-card>
-    </div>
-
-    <div *ngFor="let pokemon of pokemonList2">
-        <app-pokemon-card [pokemonName]=pokemon.name></app-pokemon-card>
-    </div>
-
-    <div *ngFor="let pokemon of pokemonList3">
+    <div  *ngFor="let pokemon of pokemonList">
         <app-pokemon-card [pokemonName]=pokemon.name></app-pokemon-card>
     </div>
 </div>
